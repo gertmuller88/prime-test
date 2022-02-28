@@ -22,6 +22,7 @@ The exposed endpoint is the `/api/prime/test` at the TCP 8080 port of the host m
 You must have installed:
 * Docker Desktop v4.5.0
 * Kubectl Client v1.22.5
+* Helm v3.8.0
 * AWS IAM Authenticator v0.5.5
 * GNU Make v3.81
 
