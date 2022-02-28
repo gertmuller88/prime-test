@@ -40,13 +40,14 @@ To deploy the service using Helm to AWS EKS Cluster, you need to run the folling
 make helm-deploy
 ```
 
-This command uses the public image hosted in
-[my public registry](https://hub.docker.com/repository/registry-1.docker.io/gertmuller88/prime-test/) at Docker Hub.
-However, you can build a new image, publish it to any public registry and then modify the `values.yml` file inside the
-`.helm/prime-test` folder so that the Helm deploy can use this new image.
+This command will output the public endpoint address and port where the service was deployed.
+
+The service uses the public image hosted in [my public registry](https://hub.docker.com/repository/registry-1.docker.io/gertmuller88/prime-test/)
+at Docker Hub. However, you can build a new image, publish it to any public registry and then modify the `values.yml`
+file inside the `.helm/prime-test` folder so that the Helm deploy can use this new image.
 
 If the new image can have the same name and will be published on Docker Hub, you can use the following command to build
-this new image.
+and push this new image.
 
 ```shell
 make docker-config
