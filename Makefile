@@ -35,7 +35,7 @@ helm-install:
 	@helm upgrade --install prime-test .helm/prime-test
 
 kubectl-get-url:
-	@kubectl get service prime-test-loadbalancer
+	@echo $(shell kubectl get service prime-test-loadbalancer -o jsonpath={'.status.loadBalancer.ingress[].hostname'}):$(shell kubectl get service prime-test-loadbalancer -o jsonpath={'.spec.ports[].port'})
 
 docker-config: docker-login docker-build docker-push
 
@@ -52,7 +52,7 @@ docker-compose-build:
 	@docker compose --file .docker/docker-compose.yml build
 
 docker-compose-up:
-	@docker compose --file .docker/docker-compose.yml up --detach --force-recreate --remove-orphans
+	@docker compose --file .docker/docker-compose.yml up --detach --build --force-recreate --remove-orphans
 
 docker-compose-down:
 	@docker compose --file .docker/docker-compose.yml down --volumes --remove-orphans

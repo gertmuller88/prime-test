@@ -39,6 +39,11 @@ users:
         - "token"
         - "-i"
         - "${var.cluster-name}"
+      env:
+        - name: AWS_ACCESS_KEY_ID
+          value: ""
+        - name: AWS_SECRET_ACCESS_KEY
+          value: ""
 KUBECONFIG
 }
 

@@ -11,5 +11,7 @@ terraform {
     encrypt        = true
     kms_key_id     = "alias/prime-test-terraform-state-bucket-key"
     dynamodb_table = "prime-test-terraform-state"
+    access_key     = ""
+    secret_key     = ""
   }
 }
