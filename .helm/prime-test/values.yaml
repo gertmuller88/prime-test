@@ -1,0 +1,23 @@
+replicaCount: 1
+
+app:
+  name:
+    deployment: prime-test
+    clusterip: prime-test-clusterip
+    nodeport: prime-test-nodeport
+    loadbalancer: prime-test-loadbalancer
+  group: api
+  image:
+    name: gertmuller88/prime-test:latest
+    pullPolicy: Always
+  service:
+    protocol: TCP
+    internalPort: 8080
+    externalPort: 80
+    minReplicas: 1
+    maxReplicas: 5
+    cpuLimits: 500m
+    cpuRequests: 200m
+    environment:
+      - key: ACTIVE_PROFILE
+        value: "aws"

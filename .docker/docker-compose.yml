@@ -1,0 +1,47 @@
+version: '3.9'
+
+#=======================================================================================================================
+#    SERVICES CONFIGURATION
+#=======================================================================================================================
+services:
+
+  #-- Redis Service ----------------------------------------------------------------------------------------------------
+  redis:
+    container_name: 'redis'
+    image: 'redis:latest'
+    networks:
+      default:
+        aliases:
+          - 'redis-local.hearst.com'
+          - 'cache-local.hearst.com'
+    expose:
+      - '6379'
+    ports:
+      - '127.0.0.1:9736:6379/tcp'
+
+  #-- Primality Test Service -------------------------------------------------------------------------------------------
+  prime-test:
+    container_name: 'prime-test'
+    image: 'gertmuller88/prime-test:latest'
+    build:
+      context: '..'
+      dockerfile: '.docker/Dockerfile'
+    environment:
+      ACTIVE_PROFILE: docker-compose
+    networks:
+      default:
+        aliases:
+          - 'prime-test-local.hearst.com'
+    expose:
+      - '8080'
+    ports:
+      - '127.0.0.1:80:8080/tcp'
+    depends_on:
+      - 'redis'
+
+#=======================================================================================================================
+#    NETWORKS CONFIGURATION
+#=======================================================================================================================
+networks:
+  default:
+    external: false

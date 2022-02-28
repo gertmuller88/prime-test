@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prime-test
+  labels:
+    app: prime-test
+    group: api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prime-test
+  template:
+    metadata:
+      labels:
+        app: prime-test
+        group: api
+    spec:
+      containers:
+        - name: prime-test
+          image: gertmuller88/prime-test:latest
+          imagePullPolicy: Always
+          env:
+            - name: ACTIVE_PROFILE
+              value: "aws"
+          ports:
+            - hostPort: 8080
+              containerPort: 8080
+          resources:
+            limits:
+              cpu: 500m
+            requests:
+              cpu: 200m
