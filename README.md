@@ -43,7 +43,7 @@ make helm-deploy
 
 This command will output the public endpoint address and port where the service was deployed.
 
-The service uses the public image hosted in [my public registry](https://hub.docker.com/repository/registry-1.docker.io/gertmuller88/prime-test/)
+The service uses the public image hosted in [my public registry](https://hub.docker.com/r/gertmuller88/prime-test)
 at Docker Hub. However, you can build a new image, publish it to any public registry and then modify the `values.yml`
 file inside the `.helm/prime-test` folder so that the Helm deploy can use this new image.
 

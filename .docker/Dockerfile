@@ -11,7 +11,7 @@ COPY pom.xml /app/prime-test/pom.xml
 RUN mvn -f /app/prime-test/pom.xml clean package
 
 FROM amazoncorretto:17-alpine AS image
-MAINTAINER "hearst.com"
+MAINTAINER "Gert Müller | gertmuller88.dev"
 
 WORKDIR /
 USER root
