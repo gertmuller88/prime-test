@@ -5,7 +5,6 @@ USER root
 
 COPY src /app/prime-test/src
 COPY rsrc /app/prime-test/rsrc
-COPY script-src /app/prime-test/script-src
 COPY pom.xml /app/prime-test/pom.xml
 
 RUN mvn -f /app/prime-test/pom.xml clean package
