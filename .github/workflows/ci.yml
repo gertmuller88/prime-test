@@ -23,4 +23,5 @@ jobs:
         with:
           push: true
           tags: gertmuller88/prime-test:latest
-          file: {context}/.docker/Dockerfile
+          context: .
+          file: .docker/Dockerfile
