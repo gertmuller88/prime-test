@@ -1,4 +1,4 @@
-package com.hearst.task.exception.abstracts;
+package dev.gertmuller88.task.exception.abstracts;
 
 import org.springframework.http.HttpStatus;
 

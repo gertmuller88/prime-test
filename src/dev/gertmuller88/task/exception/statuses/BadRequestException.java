@@ -1,6 +1,6 @@
-package com.hearst.task.exception.statuses;
+package dev.gertmuller88.task.exception.statuses;
 
-import com.hearst.task.exception.abstracts.AbstractExceptionBag;
+import dev.gertmuller88.task.exception.abstracts.AbstractExceptionBag;
 import org.springframework.http.HttpStatus;
 
 public class BadRequestException extends AbstractExceptionBag {

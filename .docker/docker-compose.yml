@@ -12,12 +12,10 @@ services:
     networks:
       default:
         aliases:
-          - 'redis-local.hearst.com'
-          - 'cache-local.hearst.com'
+          - 'redis.prime-test.gertmuller88.dev'
+          - 'cache.prime-test.gertmuller88.dev'
     expose:
       - '6379'
-    ports:
-      - '127.0.0.1:9736:6379/tcp'
 
   #-- Primality Test Service -------------------------------------------------------------------------------------------
   prime-test:
@@ -31,11 +29,11 @@ services:
     networks:
       default:
         aliases:
-          - 'prime-test-local.hearst.com'
+          - 'prime-test.gertmuller88.dev'
     expose:
       - '8080'
     ports:
-      - '127.0.0.1:80:8080/tcp'
+      - '127.0.0.1:8080:8080/tcp'
     depends_on:
       - 'redis'
 

@@ -1,8 +1,8 @@
-package com.hearst.task.service;
+package dev.gertmuller88.task.service;
 
-import com.hearst.task.exception.abstracts.AbstractExceptionBag;
-import com.hearst.task.exception.business.NotNaturalNumberException;
-import com.hearst.task.exception.statuses.BadRequestException;
+import dev.gertmuller88.task.exception.abstracts.AbstractExceptionBag;
+import dev.gertmuller88.task.exception.business.NotNaturalNumberException;
+import dev.gertmuller88.task.exception.statuses.BadRequestException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.math.BigInteger;

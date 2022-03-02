@@ -1,6 +1,6 @@
-package com.hearst.task.exception.business;
+package dev.gertmuller88.task.exception.business;
 
-import com.hearst.task.exception.abstracts.AbstractException;
+import dev.gertmuller88.task.exception.abstracts.AbstractException;
 import org.springframework.http.HttpStatus;
 import java.math.BigInteger;
 

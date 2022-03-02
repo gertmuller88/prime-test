@@ -1,6 +1,6 @@
-package com.hearst.task.controller.advice;
+package dev.gertmuller88.task.controller.advice;
 
-import com.hearst.task.exception.statuses.BadRequestException;
+import dev.gertmuller88.task.exception.statuses.BadRequestException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.annotation.ControllerAdvice;

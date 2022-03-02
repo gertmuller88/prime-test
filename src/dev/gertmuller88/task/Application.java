@@ -1,4 +1,4 @@
-package com.hearst.task;
+package dev.gertmuller88.task;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

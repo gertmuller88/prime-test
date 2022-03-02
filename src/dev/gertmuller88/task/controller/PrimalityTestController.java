@@ -1,6 +1,6 @@
-package com.hearst.task.controller;
+package dev.gertmuller88.task.controller;
 
-import com.hearst.task.service.PrimalityTestService;
+import dev.gertmuller88.task.service.PrimalityTestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
