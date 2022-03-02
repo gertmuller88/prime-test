@@ -1,4 +1,4 @@
-name: ci
+name: Continuous Integration Pipeline
 
 on:
   push:
@@ -9,6 +9,8 @@ jobs:
   build-and-push-docker-image:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v2
       - name: Setup QEMU
         uses: docker/setup-qemu-action@v1
       - name: Setup Docker Buildx
